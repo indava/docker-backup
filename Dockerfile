@@ -1,11 +1,8 @@
-# http://docs.docker.com/reference/builder
-# docker backup image (boombatower/docker-backup).
 
-FROM boombatower/opensuse
-MAINTAINER Jimmy Berry <jimmy@boombatower.com>
+FROM alpine
+MAINTAINER Indava <support@indava.com>
 
-RUN zypper refresh && \
-    zypper -n in --no-recommends tar xz
+RUN apk add tar xz
 
 ADD backup.sh /root/bin/
 
