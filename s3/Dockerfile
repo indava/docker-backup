@@ -1,5 +1,5 @@
 
-FROM backup
+FROM indava/backup
 
 RUN apk add --no-cache python py-pip ca-certificates tzdata \
     && pip install --upgrade pip \
